@@ -1,0 +1,5 @@
+stepdefinitions\API_Steps.class
+stepdefinitions\LoginSteps.class
+stepdefinitions\Hooks.class
+runner\TestRunner.class
+stepdefinitions\AdminSteps.class

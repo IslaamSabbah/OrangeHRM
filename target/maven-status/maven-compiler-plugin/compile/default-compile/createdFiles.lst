@@ -1,0 +1,6 @@
+pages\AddUserPage.class
+pages\DeleteUserPage.class
+utils\ConfigReader.class
+pages\AdminPage.class
+pages\LoginPage.class
+utils\DriverManager.class
