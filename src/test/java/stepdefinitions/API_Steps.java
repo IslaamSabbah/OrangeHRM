@@ -14,7 +14,7 @@ public class API_Steps {
 	String authToken;
 	int candidateId;
 
-	//Step 1: Authenticate and store the token
+	// Step 1: Authenticate and store the token
 	public void authenticate() {
 		Response response = given().header("Content-Type", "application/json")
 				.body("{\"username\":\"Admin\",\"password\":\"admin123\"}").when().post(baseURI + "/authenticate")
@@ -34,7 +34,6 @@ public class API_Steps {
 				.body("message", equalTo("Candidate added successfully")).extract().response();
 
 		candidateId = response.jsonPath().getInt("id");
-		System.out.println("Added Candidate ID: " + candidateId);
 	}
 
 	@Then("I delete a candidate through API")
@@ -57,6 +56,5 @@ public class API_Steps {
 				.delete(baseURI + "/recruitment/candidates/" + candidateIdToDelete).then().assertThat().statusCode(200)
 				.body("message", equalTo("Candidate deleted successfully"));
 
-		System.out.println("Deleted Candidate ID: " + candidateIdToDelete);
 	}
 }
