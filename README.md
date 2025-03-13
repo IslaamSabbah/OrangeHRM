@@ -1,10 +1,10 @@
-Introduction
+# Introduction
 
 This is a Selenium-based Test Automation Framework designed for automating the OrangeHRM web application. It follows the Page Object Model (POM) to enhance test maintainability and uses Cucumber BDD for writing feature files in a human-readable format.
 
 
 
-Tech Stack
+# Tech Stack
 
 Programming Language: Java
 
@@ -20,7 +20,7 @@ Version Control: Git
 
 
 
-Prerequisites
+# Prerequisites
 
 Java 17 or later
 
@@ -33,18 +33,18 @@ IDE (IntelliJ IDEA / Eclipse)
 Git (For version control)
 
 
-Installing Dependencies
+# Installing Dependencies
 Run the following command to install required dependencies:
   
 mvn clean install
 
 
-Running the Tests
+# Running the Tests
 
 mvn test
 
 
-Alternatively, you can run specific feature files:
+# Alternatively, you can run specific feature files:
 
 mvn test -Dcucumber.options="src/test/resources/features/UserManagement.feature"
 
@@ -57,33 +57,25 @@ HRM-Automation/
 
 │   ├── main/
 
-│   │   ├── java/pages/         
-# Page Object Model (POM) classes
+│   │   ├── java/pages/    (Page Object Model (POM) classes)
 
-│   │   ├── java/utils/     
-# Helper utilities
+│   │   ├── java/utils/   (Helper utilities)
 
 │   ├── test/
 
-│   │   ├── java/stepdefinitions 
-# Cucumber step definitions
+│   │   ├── java/stepdefinitions        (Cucumber step definitions)
 
-│   │   ├── java/runner/    
-# Test runners
+│   │   ├── java/runner/           (Test runners)
 
 │   │   ├── resources/
 
-│   │   │   ├── features/   
-# Cucumber feature files
+│   │   │   ├── features/          (Cucumber feature files)
 
-│   │   │   ├── config/       
-# Configuration files
+│   │   │   ├── config/            (Configuration files)
 
-│── pom.xml              
-# dependencies
+│── pom.xml                     (dependencies)
 
-│── README.md              
-# Project documentation
+│── README.md               (Project documentation)
 
 
 
