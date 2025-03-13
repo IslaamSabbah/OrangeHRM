@@ -52,18 +52,39 @@ mvn test -Dcucumber.options="src/test/resources/features/UserManagement.feature"
 Project Structure
 
 HRM-Automation/
+
 │── src/
+
 │   ├── main/
-│   │   ├── java/pages/          # Page Object Model (POM) classes
-│   │   ├── java/utils/          # Helper utilities
+
+│   │   ├── java/pages/         
+# Page Object Model (POM) classes
+
+│   │   ├── java/utils/     
+# Helper utilities
+
 │   ├── test/
-│   │   ├── java/stepdefinitions # Cucumber step definitions
-│   │   ├── java/runner/         # Test runners
+
+│   │   ├── java/stepdefinitions 
+# Cucumber step definitions
+
+│   │   ├── java/runner/    
+# Test runners
+
 │   │   ├── resources/
-│   │   │   ├── features/        # Cucumber feature files
-│   │   │   ├── config/          # Configuration files
-│── pom.xml                      # dependencies
-│── README.md                    # Project documentation
+
+│   │   │   ├── features/   
+# Cucumber feature files
+
+│   │   │   ├── config/       
+# Configuration files
+
+│── pom.xml              
+# dependencies
+
+│── README.md              
+# Project documentation
+
 
 
 
