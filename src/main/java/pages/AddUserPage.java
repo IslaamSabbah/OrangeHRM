@@ -74,7 +74,7 @@ public class AddUserPage {
 			System.out.println("User added successfully");
 
 		} catch (Exception e) {
-			System.out.println("❌ ERROR: Failed to add user");
+			System.out.println("ERROR: Failed to add user");
 			e.printStackTrace();
 		}
 	}
@@ -110,13 +110,13 @@ public class AddUserPage {
 			}
 
 			if (!optionSelected) {
-				System.out.println("❌ ERROR: '" + optionText + "' not found in dropdown.");
+				System.out.println("ERROR: '" + optionText + "' not found in dropdown.");
 			}
 
 			Thread.sleep(500);
 
 		} catch (Exception e) {
-			System.out.println("❌ ERROR: Failed to select option: " + optionText);
+			System.out.println("ERROR: Failed to select option: " + optionText);
 			e.printStackTrace();
 		}
 	}
@@ -129,7 +129,7 @@ public class AddUserPage {
 					usernameField, username);
 			System.out.println("Username entered using JavaScript: " + username);
 		} catch (Exception e) {
-			System.out.println("❌ ERROR: Could not enter username");
+			System.out.println("ERROR: Could not enter username");
 			e.printStackTrace();
 		}
 	}
@@ -151,7 +151,7 @@ public class AddUserPage {
 			System.out.println("Selected employee using keyboard: " + name);
 
 		} catch (Exception e) {
-			System.out.println("❌ ERROR: Could not select employee name");
+			System.out.println("ERROR: Could not select employee name");
 			e.printStackTrace();
 		}
 	}

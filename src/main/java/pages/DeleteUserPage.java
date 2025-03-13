@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 
 public class DeleteUserPage {
 	WebDriver driver;
@@ -23,8 +24,7 @@ public class DeleteUserPage {
 	@FindBy(xpath = "//i[contains(@class, 'bi-trash')]")
 	WebElement deleteButton;
 
-	// @FindBy(xpath = "//i[contains(@class, 'bi-trash')]")
-	@FindBy(xpath = "//*[@id=\"app\"]/div[3]/div/div/div/div[3]/button[2]")
+	@FindBy(xpath = "//div[contains(@class, 'oxd-dialog-container-default')]//button[contains(., 'Yes, Delete')]")
 	WebElement yesDeleteButton;
 
 	public DeleteUserPage(WebDriver driver) {
@@ -43,21 +43,29 @@ public class DeleteUserPage {
 	}
 
 	public void deleteUser(String username) {
-		wait.until(ExpectedConditions.elementToBeClickable(deleteButton));
-		deleteButton.click();
+		wait.until(ExpectedConditions.elementToBeClickable(deleteButton)).click();
 
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			wait.until(ExpectedConditions
-					.invisibilityOfElementLocated(By.xpath("//div[contains(@class, 'oxd-dialog-container-default')]")));
+			WebElement deleteModal = wait.until(ExpectedConditions
+					.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'oxd-dialog-container-default')]")));
 
-			yesDeleteButton.click();
-			System.out.println("Trash icon clicked.");
+			wait.until(ExpectedConditions.elementToBeClickable(yesDeleteButton));
+
+			try {
+				yesDeleteButton.click();
+				System.out.println("Successfully clicked 'Yes, Delete'.");
+			} catch (Exception e) {
+				System.out.println("Normal click failed. Trying JavaScript click...");
+			}
+
+			wait.until(ExpectedConditions.invisibilityOf(deleteModal));
+
+			System.out.println("User deleted successfully.");
 
 		} catch (Exception e) {
-			System.out.println("❌ ERROR: Could not click the trash icon.");
+			System.out.println("ERROR: Could not delete user.");
 			e.printStackTrace();
 		}
-
 	}
+
 }

@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 22.23 s <<< FAILURE! -- in runner.TestRunner
-OrangeHRM User Management.Add and Delete a User in OrangeHRM -- Time elapsed: 21.78 s <<< FAILURE!
-java.lang.AssertionError: expected:<11> but was:<10>
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 43.01 s <<< FAILURE! -- in runner.TestRunner
+OrangeHRM User Management.Add and Delete a User in OrangeHRM -- Time elapsed: 42.36 s <<< FAILURE!
+java.lang.AssertionError: expected:<36> but was:<-1>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepdefinitions.AdminSteps.i_verify_user_count_decreased(AdminSteps.java:64)
-	at ✽.I verify the number of users decreased by 1(file:///C:/Users/11795/Belron-Workspace/HRM-Automation/src/test/resources/features/UserManagement.feature:19)
+	at stepdefinitions.AdminSteps.i_verify_user_count_increased(AdminSteps.java:48)
+	at ✽.I verify the number of users increased by 1(file:///C:/Users/11795/Belron-Workspace/HRM-Automation/src/test/resources/features/UserManagement.feature:15)
 
